@@ -6,22 +6,22 @@ using Subsets.Dda;
 namespace Subsets.Dda
 {
     
-    [RegisteredType(nameof(FloatVariable), "", nameof(Resource))]
+    [RegisteredType(nameof(DoubleVariable), "", nameof(Resource))]
     [Tool]
-    public class FloatVariable : Variable<float>
+    public class DoubleVariable : Variable<double>
     {
-        public FloatVariable() : base()
+        public DoubleVariable() : base()
         {
-            GD.Print("FloatVariable::FloatVariable()");
+            GD.Print("DoubleVariable::DoubleVariable()");
         }
 
-        protected override float DuplicateValue(float value)
+        protected override double DuplicateValue(double value)
         {
             return value;
         }
         
         
-        protected override float InitialValue
+        protected override double InitialValue
         {
             get
             {
@@ -34,6 +34,6 @@ namespace Subsets.Dda
         }
         
         
-        [Export] private float initialValue;
+        [Export] private double initialValue;
     }
 }
